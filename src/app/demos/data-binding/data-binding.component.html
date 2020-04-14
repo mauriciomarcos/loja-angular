@@ -1,0 +1,50 @@
+<div class="container main-container">
+    <h3>Interpolation</h3>
+    
+    <p [ngClass]="{
+        'text-secondary' :contador < 3,
+        'text-success' :contador >= 3,
+        'text-warning' :contador >= 5,
+        'text-danger' :contador == 10
+    }">O número de cliques é: {{ contador }}</p>
+
+    <div>
+        <h3>Property Biding</h3>
+        <button class="btn btn-primary" [disabled]="contador >= 10">Informação</button>
+        <br />
+        <br >
+        <img [src]="urlImagem" height="50px" width="50px"/>
+    </div>
+    <br />
+    
+    <div>
+        <h3>Event Biding</h3>
+        <button class="btn btn-warning" (click)='adicionarClick()'>Informação</button>
+    </div>
+    <br />
+    
+    <!--Interpolação    
+    <div>        
+        <h3>{{ nome }}</h3>
+        <input  type="text" (keyup)='keyUp($event)' placeholder="Digite seu nome"/>
+    </div>
+    <br />-->
+
+    <div>
+        <!--Esse é um exemplo de two-way biding - Forma menos elegante de se utilizar-->
+        <h3>Two-way Biding</h3>
+        <input  type="text" placeholder="Digite seu nome" [ngModel]="nome" (ngModelChange)='nome = $event'/>
+        <br />
+        <label>Seu nome é: {{ nome }}</label>
+    </div>
+    <br />
+
+    <div>
+        <!--Esse é um exemplo de two-way biding - Forma mais elegante de se utilizar-->
+        <h3>Two-way Biding</h3>
+        <input  type="text" placeholder="Digite seu nome" [(ngModel)]="nome" />
+        <br />
+        <label [ngClass]='nome'>Seu nome é: {{ nome }}</label>
+        <!--<label class="{{ nome }}">Seu nome é: {{ nome }}</label>-->
+    </div>
+</div>

@@ -1,0 +1,26 @@
+[
+	{
+		"id": 1,
+		"nome": "mouse microsoft",
+		"valor": 15.90,
+		"promocao": false,
+		"valorPromo": 0,
+		"imagem": "mouse.jpg"
+	},
+	{
+		"id": 2,
+		"nome": "teclado wireless dell",
+		"valor": 187.99,
+		"promocao": true,
+		"valorPromo": 99.90,
+		"imagem": "teclado.jpg"
+	},
+	{
+		"id": 3,
+		"nome": "monitor monitor samsung 21''",
+		"valor": 1119.99,
+		"promocao": false,
+		"valorPromo": 0,
+		"imagem": "monitor.jpg"
+	}
+]
